@@ -220,9 +220,17 @@ input[type=radio] {
     -ms-appearance: radio !important;
 }
 
+.contain {
+    object-fit: contain;
+}
+
+.cover {
+    object-fit: cover;
+}
+
 img {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
 }
 
 h2 {
@@ -298,7 +306,6 @@ body {
 .feedback-img {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    object-fit: cover;
 }
 
 .feedback-form {
@@ -500,58 +507,13 @@ input:-moz-placeholder {
     background: #ff9966;
 }
 
-ul {
-    background: 0 0;
-    z-index: 9;
-    border-bottom: 1px solid #999;
-    padding-top: 15px;
-}
-
-ul li {
-    padding: 5px 0px;
-    z-index: 2;
-    color: #bebebe;
-}
-
-ul li:not(.init) {
-    display: none;
-    background: #fff;
-    color: #222;
-    padding: 5px 10px;
-}
-
-ul li:not(.init):hover,
-ul li.selected:not(.init) {
-    background: #ff9966;
-}
-
-li.init {
-    cursor: pointer;
-    position: relative;
-}
-
-li.init:after {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    font-size: 20px;
-    color: #bebebe;
-    font-family: 'Material-Design-Iconic-Font';
-    content: '\f2f2';
-}
-
 .label-radio {
     display: block;
     margin-bottom: 18px;
 }
 
 .vertify-feedback {
-    color: #edb77d;
+    color: #ff7060;
     font-size: 11px;
     text-decoration: none;
     margin-top: 14px;
@@ -565,26 +527,6 @@ li.init:after {
 
 .vertify-feedback:hover {
     text-decoration: underline;
-}
-
-.select-list {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 47px;
-}
-
-.list-item {
-    position: absolute;
-    width: 100%;
-}
-
-#time {
-    z-index: 99;
-}
-
-#food {
-    z-index: 9;
 }
 
 @media screen and (max-width: 1200px) {
@@ -616,7 +558,6 @@ li.init:after {
     .feedback-img {
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
-        width: 100%;
     }
 }
 
@@ -633,6 +574,3 @@ li.init:after {
         padding: 72px 40px 70px 40px;
     }
 }
-
-
-/*# sourceMappingURL=style.css.map */
