@@ -574,3 +574,18 @@ input:-moz-placeholder {
         padding: 72px 40px 70px 40px;
     }
 }
+
+a {
+    color: red;
+}
+
+.footer {
+    text-align: center;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
