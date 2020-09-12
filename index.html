@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stress Update</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="feedback-content">
+                <div class="feedback-image">
+                    <img class="feedback-img" id="feedback-img" src="" alt="Feedback Image">
+                </div>
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <h2>How are you this weekend?</h2>
+                        <div class="form-group form-input">
+                            <input type="text" name="name" id="name" value="" required>
+                            <label for="name" class="form-label">Your name</label>
+                        </div>
+                        <div class="form-group form-input">
+                            <input type="test" name="team" id="team" value="" required />
+                            <label for="team" class="form-label">Your team</label>
+                        </div>
+                        <div class="form-radio">
+                            <label class="label-radio">Your Total Stress Level</label>
+                            <div class="radio-item-list">
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="1" id="number_people_1" />
+                                    <label for="number_people_1">1</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="2" id="number_people_2" />
+                                    <label for="number_people_2">2</label>
+                                </span>
+                                <span class="radio-item active">
+                                    <input type="radio" name="number_people" value="3" id="number_people_3" checked="checked" />
+                                    <label for="number_people_3">3</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="4" id="number_people_4" />
+                                    <label for="number_people_4">4</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="5" id="number_people_5" />
+                                    <label for="number_people_5">5</label>
+                                </span>
+                            </div>
+                            <a href="#" class="vertify-feedback" style="padding-top: 5px;"> ▴ Level 1 being almost none; Level 5 being Extremely stressed</a>
+                        </div>
+                        <div class="form-group form-input">
+                            <label for="other">Anything else you want to say?</label>
+                            <textarea name="other" id="other" value="" required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="SUBMIT NOW" class="submit" />
+                            <a href="#" class="vertify-feedback">◄ Also take this doggo picture to brighten up your day!</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
