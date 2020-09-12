@@ -12,23 +12,11 @@ $(document).ready(function() {
         });
 });
 
-
-// function submitForm() {
-//     var formName = document.getElementById('name');
-//     var formTeam = document.getElementById('team');
-//     var formStress = document.getElementById('form-radio');
-//     var formOther = document.getElementById('other');
-
-//     var formData = {
-//         name: formName.value,
-//         team: formTeam.value,
-//         stress: formStress.find("active").value,
-//         other: formOther.value
-//     }
-
-//     var jsonFormData = JSON.stringify(formData);
-//     console.log(jsonFormData)
-// }
+function fetchRadio() {
+    var x = $("input[type='radio'][name='stress_level']:checked").val();
+    var y = document.getElementById("stess-value");
+    y.value = x;
+}(jQuery);
 
 (function($) {
     "use strict";

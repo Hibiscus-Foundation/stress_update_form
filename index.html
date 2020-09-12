@@ -17,43 +17,44 @@
         <div class="container">
             <div class="feedback-content">
                 <div class="feedback-image">
-                    <img class="feedback-img cover" id="feedback-img" src="" alt="Feedback Image">
+                    <img class="feedback-img cover" id="feedback-img" src="" alt="Doggo Image">
                 </div>
                 <div class="feedback-form">
-                    <form id="feedback-form">
+                    <form method="post" autocomplete="off" name="feedback-form" id="feedback-form">
                         <h2>How are you this weekend?</h2>
                         <div class="form-group form-input">
                             <input type="text" name="name" id="name" value="" required>
                             <label for="name" class="form-label">Your name</label>
                         </div>
                         <div class="form-group form-input">
-                            <input type="test" name="team" id="team" value="" required />
+                            <input type="text" name="team" id="team" value="" required />
                             <label for="team" class="form-label">Your team</label>
                         </div>
                         <div class="form-radio">
                             <label class="label-radio">Your Total Stress Level</label>
                             <div class="radio-item-list">
                                 <span class="radio-item">
-                                    <input type="radio" name="number_people" value="1" id="number_people_1" />
-                                    <label for="number_people_1">1</label>
+                                    <input type="radio" name="stress_level" value="1" id="stress_level_1" />
+                                    <label for="stress_level_1">1</label>
                                 </span>
                                 <span class="radio-item">
-                                    <input type="radio" name="number_people" value="2" id="number_people_2" />
-                                    <label for="number_people_2">2</label>
+                                    <input type="radio" name="stress_level" value="2" id="stress_level_2" />
+                                    <label for="stress_level_2">2</label>
                                 </span>
                                 <span class="radio-item active">
-                                    <input type="radio" name="number_people" value="3" id="number_people_3" checked="checked" />
-                                    <label for="number_people_3">3</label>
+                                    <input type="radio" name="stress_level" value="3" id="stress_level_3" checked="checked" />
+                                    <label for="stress_level_3">3</label>
                                 </span>
                                 <span class="radio-item">
-                                    <input type="radio" name="number_people" value="4" id="number_people_4" />
-                                    <label for="number_people_4">4</label>
+                                    <input type="radio" name="stress_level" value="4" id="stress_level_4" />
+                                    <label for="stress_level_4">4</label>
                                 </span>
                                 <span class="radio-item">
-                                    <input type="radio" name="number_people" value="5" id="number_people_5" />
-                                    <label for="number_people_5">5</label>
+                                    <input type="radio" name="stress_level" value="5" id="stress_level_5" />
+                                    <label for="stress_level_5">5</label>
                                 </span>
                             </div>
+                            <input type="text" name="stess-value" id="stess-value" class="hidden" value="">
                             <a href="#" class="vertify-feedback" style="padding-top: 5px;"> ▴ Level 1 being almost none; Level 5 being Extremely stressed</a>
                         </div>
                         <div class="form-group form-input">
@@ -61,7 +62,7 @@
                             <textarea name="other" id="other" value=""></textarea>
                         </div>
                         <div class="form-submit">
-                            <input type="submit" value="SUBMIT NOW" class="submit" />
+                            <input type="submit" value="SUBMIT NOW" class="submit" onclick="fetchRadio()" />
                             <a href="#" class="vertify-feedback">◄ Also take this doggo picture to brighten up your day!</a>
                         </div>
                     </form>
@@ -69,6 +70,20 @@
             </div>
         </div>
     </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzT7mbxgM5NV2Z6EzqRaMkRdUjMKcbgKb1qRGNrCq9sMvJOh2AG/exec'
+        const form = document.forms['feedback-form']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for filling the form..! Hope you have a great day!"))
+                .then(response => form.reset())
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
