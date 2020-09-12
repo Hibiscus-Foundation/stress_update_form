@@ -12,6 +12,24 @@ $(document).ready(function() {
         });
 });
 
+
+// function submitForm() {
+//     var formName = document.getElementById('name');
+//     var formTeam = document.getElementById('team');
+//     var formStress = document.getElementById('form-radio');
+//     var formOther = document.getElementById('other');
+
+//     var formData = {
+//         name: formName.value,
+//         team: formTeam.value,
+//         stress: formStress.find("active").value,
+//         other: formOther.value
+//     }
+
+//     var jsonFormData = JSON.stringify(formData);
+//     console.log(jsonFormData)
+// }
+
 (function($) {
     "use strict";
     $(".form-radio .radio-item").click(function() {
