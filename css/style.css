@@ -304,8 +304,12 @@ body {
 }
 
 .feedback-img {
+    margin: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .feedback-form {
