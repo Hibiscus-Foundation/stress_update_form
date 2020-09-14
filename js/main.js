@@ -1,9 +1,9 @@
 $(document).ready(function() {
     var image;
-    fetch('https://random.dog/woof.json')
+    fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
         .then(data => {
-            image = data.url;
+            image = data.message;
             var elem = document.getElementById('feedback-img')
             elem.setAttribute("src", image);
         })
