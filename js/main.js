@@ -1,3 +1,6 @@
+var curHeight;
+var curWidth;
+
 $(document).ready(function() {
     var image;
     fetch('https://dog.ceo/api/breeds/image/random')
@@ -5,8 +8,13 @@ $(document).ready(function() {
         .then(data => {
             image = data.message;
             var elem = document.getElementById('feedback-img')
+            elem.onload = function() {
+                curHeight = this.height;
+                curWidth = this.width;
+            };
             elem.setAttribute("src", image);
         })
+        .then(console.log(curHeight, curWidth))
         .catch(err => {
             console.error(err)
         });
