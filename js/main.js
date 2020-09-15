@@ -8,10 +8,9 @@ $(document).ready(function() {
             iHeight = body.height;
             iWidth = body.width;
             var elem = document.getElementById('feedback-img');
-            if (image.slice(-3) == "gif") {
-                console.log("gif");
+            if (image.slice(-3) == "gif")
                 elem.setAttribute("src", "./../doggo.jpg");
-            } else elem.setAttribute("src", image);
+            else elem.setAttribute("src", image);
             if (iHeight > iWidth)
                 elem.classList.add("potrait");
             else
