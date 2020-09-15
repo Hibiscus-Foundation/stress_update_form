@@ -298,6 +298,30 @@ body {
     -ms-flex-wrap: wrap;
 }
 
+@media screen and (min-width: 1201px) {
+    .potrait {
+        width: 100%;
+        height: 710px;
+        object-fit: cover;
+    }
+    .landscape {
+        width: auto;
+        height: 710px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .potrait {
+        width: 100%;
+        object-fit: cover;
+    }
+    .landscape {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .feedback-image {
     width: 58.33%;
     margin-bottom: -8px;
@@ -307,9 +331,6 @@ body {
     margin: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 }
 
 .feedback-form {

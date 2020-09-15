@@ -1,20 +1,22 @@
-var curHeight;
-var curWidth;
-
 $(document).ready(function() {
-    var image;
-    fetch('https://dog.ceo/api/breeds/image/random')
+    var image, iHeight, iWidth;
+    fetch('https://api.thedogapi.com/v1/images/search')
         .then(response => response.json())
         .then(data => {
-            image = data.message;
+            body = data[0];
+            image = body.url;
+            iHeight = body.height;
+            iWidth = body.width;
             var elem = document.getElementById('feedback-img')
-            elem.onload = function() {
-                curHeight = this.height;
-                curWidth = this.width;
-            };
             elem.setAttribute("src", image);
+            if (iHeight > iWidth) {
+                elem.classList.add("potrait")
+                console.log("potrait")
+            } else {
+                elem.classList.add("landscape")
+                console.log("landscape")
+            }
         })
-        .then(console.log(curHeight, curWidth))
         .catch(err => {
             console.error(err)
         });
