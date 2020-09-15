@@ -7,15 +7,16 @@ $(document).ready(function() {
             image = body.url;
             iHeight = body.height;
             iWidth = body.width;
-            var elem = document.getElementById('feedback-img')
-            elem.setAttribute("src", image);
-            if (iHeight > iWidth) {
-                elem.classList.add("potrait")
-                console.log("potrait")
-            } else {
-                elem.classList.add("landscape")
-                console.log("landscape")
-            }
+            var elem = document.getElementById('feedback-img');
+            if (image.slice(-3) == "gif") {
+                console.log("gif");
+                elem.setAttribute("src", "./../doggo.jpg");
+            } else elem.setAttribute("src", image);
+            if (iHeight > iWidth)
+                elem.classList.add("potrait");
+            else
+                elem.classList.add("landscape");
+
         })
         .catch(err => {
             console.error(err)
