@@ -15,10 +15,7 @@
 </head>
 
 <body>
-    <div class="logo">
-        <a href="index.html"><img src="logoh.png" height="80"></img>
-        </a>
-    </div>
+
     <div class="main">
         <div class="container">
             <div class="feedback-content">
@@ -27,6 +24,10 @@
                 </div>
                 <div class="feedback-form">
                     <form method="post" autocomplete="off" name="feedback-form" id="feedback-form">
+                        <div class="logo">
+                            <a href="index.html"><img src="logoh.png" height="80"></img>
+                            </a>
+                        </div>
                         <h2>How are you this weekend?</h2>
                         <div class="form-group form-input">
                             <input type="text" name="name" id="name" value="" required>
@@ -34,7 +35,7 @@
                         </div>
                         <div class="form-group form-select">
                             <select class="f-select" name="team" id="team" required>
-                                    <option disabled="disabled" selected="selected">Team</option>
+                                    <option disabled="disabled" selected="selected">Select your team</option>
                                     <option>Advisors</option>
                                     <option>Communications</option>
                                     <option>Content</option>
@@ -49,48 +50,75 @@
                                     <option>Volunteers</option>
                             </select>
                         </div>
-                        <div class="form-radio">
+                        <div class="form-radio-tot">
                             <label class="label-radio">Your Total Stress Level</label>
                             <div class="radio-item-list">
-                                <span class="radio-item">
+                                <span class="radio-item-tot">
                                     <input type="radio" name="stress_level" value="1" id="stress_level_1" />
                                     <label for="stress_level_1">1</label>
                                 </span>
-                                <span class="radio-item">
+                                <span class="radio-item-tot">
                                     <input type="radio" name="stress_level" value="2" id="stress_level_2" />
                                     <label for="stress_level_2">2</label>
                                 </span>
-                                <span class="radio-item active">
+                                <span class="radio-item-tot active">
                                     <input type="radio" name="stress_level" value="3" id="stress_level_3" checked="checked" />
                                     <label for="stress_level_3">3</label>
                                 </span>
-                                <span class="radio-item">
+                                <span class="radio-item-tot">
                                     <input type="radio" name="stress_level" value="4" id="stress_level_4" />
                                     <label for="stress_level_4">4</label>
                                 </span>
-                                <span class="radio-item">
+                                <span class="radio-item-tot">
                                     <input type="radio" name="stress_level" value="5" id="stress_level_5" />
                                     <label for="stress_level_5">5</label>
                                 </span>
                             </div>
                             <input type="text" name="stess-value" id="stess-value" class="hidden" value="">
-                            <a href="#" class="vertify-feedback" style="padding-top: 5px;"> ▴ Level 1 being almost none; Level 5 being Extremely stressed</a>
                         </div>
-                        <div class="form-group form-input">
+                        <div class="form-radio-hibi">
+                            <label class="label-radio">How much of it is because of HFSW?</label>
+                            <div class="radio-item-list">
+                                <span class="radio-item-hibi">
+                                    <input type="radio" name="hstress_level" value="1" id="hstress_level_1" />
+                                    <label for="hstress_level_1">1</label>
+                                </span>
+                                <span class="radio-item-hibi">
+                                    <input type="radio" name="hstress_level" value="2" id="hstress_level_2" />
+                                    <label for="hstress_level_2">2</label>
+                                </span>
+                                <span class="radio-item-hibi hactive">
+                                    <input type="radio" name="hstress_level" value="3" id="hstress_level_3" checked="checked" />
+                                    <label for="hstress_level_3">3</label>
+                                </span>
+                                <span class="radio-item-hibi">
+                                    <input type="radio" name="hstress_level" value="4" id="hstress_level_4" />
+                                    <label for="hstress_level_4">4</label>
+                                </span>
+                                <span class="radio-item-hibi">
+                                    <input type="radio" name="hstress_level" value="5" id="hstress_level_5" />
+                                    <label for="hstress_level_5">5</label>
+                                </span>
+                            </div>
+                            <input type="text" name="hibi-stess-value" id="hibi-stess-value" class="hidden" value="null">
+                            <p class="tooltip">▴ Level 1 being "Almost None" <br>Level 5 being "Extremely Stressed"</p>
+                        </div>
+                        <!-- <div class="form-group form-input">
                             <label for="other">Anything else you want to say?</label>
                             <textarea name="other" id="other" value=""></textarea>
-                        </div>
+                        </div> -->
                         <div class="form-submit">
-                            <input type="submit" value="SUBMIT NOW" class="submit" onclick="fetchRadio()" />
-                            <a href="#" class="vertify-feedback">◄ Also take this doggo picture to brighten up your day!</a>
+                            <input type="submit" id="submit" value="SUBMIT NOW" class="submit" />
+                        </div>
+                        <div class="footer">
+                            Made with <span class="heart">❤</span> by <a href="https://github.com/Purukitto" target="_blank">Purukitto</a> for <a href="hibiscusfoundation.org" target="_blank">Hibiscus Foundation</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        Made with <span class="heart">❤</span> by <a href="https://github.com/Purukitto" target="_blank">Purukitto</a> for <a href="hibiscusfoundation.org" target="_blank">Hibiscus Foundation</a></div>
+
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzT7mbxgM5NV2Z6EzqRaMkRdUjMKcbgKb1qRGNrCq9sMvJOh2AG/exec'
         const form = document.forms['feedback-form']

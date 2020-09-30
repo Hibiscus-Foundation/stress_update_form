@@ -24,6 +24,9 @@ $(document).ready(function() {
         .catch(err => {
             console.error(err)
         });
+    document.getElementById("submit").addEventListener("click", fetchRadio());
+    document.getElementById("submit").addEventListener("click", fetchRadio2());
+
 });
 
 function fetchRadio() {
@@ -32,10 +35,23 @@ function fetchRadio() {
     y.value = x;
 }(jQuery);
 
+function fetchRadio2() {
+    var x = $("input[type='radio'][name='hstress_level']:checked").val();
+    var y = document.getElementById("hibi-stess-value");
+    y.value = x;
+}(jQuery);
+
 (function($) {
-    "use strict";
-    $(".form-radio .radio-item").click(function() {
-        $(this).parent().find(".radio-item").removeClass("active");
+    $(".form-radio-tot .radio-item-tot").click(function() {
+        $(this).parent().find(".radio-item-tot").removeClass("active");
         $(this).addClass("active");
+    });
+
+})(jQuery);
+
+(function($) {
+    $(".form-radio-hibi .radio-item-hibi").click(function() {
+        $(this).parent().find(".radio-item-hibi").removeClass("hactive");
+        $(this).addClass("hactive");
     });
 })(jQuery);
