@@ -271,7 +271,7 @@ body {
 
 .main {
     position: relative;
-    margin: 5% 0;
+    margin: 5.4% 0;
 }
 
 .container {
@@ -299,7 +299,7 @@ body {
 }
 
 form {
-    padding: 60px 70px 25px 70px;
+    padding: 60px 70px 60px 70px;
 }
 
 @media screen and (min-width: 1201px) {
@@ -691,7 +691,7 @@ input:-moz-placeholder {
         padding: 7px 1px;
     }
     form {
-        padding: 60px 40px 25px 40px;
+        padding: 60px 40px 60px 40px;
     }
 }
 
