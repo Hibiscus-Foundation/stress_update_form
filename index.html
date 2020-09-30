@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stress Update</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <!-- Main css -->
@@ -31,9 +32,22 @@
                             <input type="text" name="name" id="name" value="" required>
                             <label for="name" class="form-label">Your name (or Anon)</label>
                         </div>
-                        <div class="form-group form-input">
-                            <input type="text" name="team" id="team" value="" required />
-                            <label for="team" class="form-label">Your team</label>
+                        <div class="form-group form-select">
+                            <select class="f-select" name="team" id="team" required>
+                                    <option disabled="disabled" selected="selected">Team</option>
+                                    <option>Advisors</option>
+                                    <option>Communications</option>
+                                    <option>Content</option>
+                                    <option>Counselling</option>
+                                    <option>Design</option>
+                                    <option>Director</option>
+                                    <option>Editorial</option>
+                                    <option>HR</option>
+                                    <option>PR</option>
+                                    <option>Projects</option>
+                                    <option>Social Media</option>
+                                    <option>Volunteers</option>
+                            </select>
                         </div>
                         <div class="form-radio">
                             <label class="label-radio">Your Total Stress Level</label>

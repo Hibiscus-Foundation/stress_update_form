@@ -443,6 +443,15 @@ form {
     padding-top: 21px;
 }
 
+.form-select {
+    padding-top: 21px;
+}
+
+.f-select {
+    background-color: #111;
+    color: #FFF
+}
+
 .form-label {
     position: absolute;
     transition: 0.25s ease;
